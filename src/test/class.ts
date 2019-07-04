@@ -140,7 +140,18 @@
 // dad.name = "Man with the 3-piece suit"; // 错误! name 是只读的.
 
 // 参数属性
+// class Person {
+//   constructor(private name: string){}
+//   todo(number: number) {
+//     return `${this.name}打到了${number}`
+//   }
+// }
+// let stu1 = new Person('小张')
+// console.log(stu1.todo(3))
+// console.log(stu1.name) // errrpr 属性“name”为私有属性，只能在类“Person”中访问
 
+// 注意看我们是如何舍弃了theName，仅在构造函数里使用private name: string参数来创建和初始化name成员。 我们把声明和赋值合并至一处。
 
+//参数属性通过给构造函数参数添加一个访问限定符来声明。 使用private限定一个参数属性会声明并初始化一个私有成员；对于public和protected来说也是一样。
 
 

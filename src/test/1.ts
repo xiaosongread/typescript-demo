@@ -99,15 +99,24 @@
 // console.log(one)
 // // console.log(two)
 
-class Animal {
-  name: string;
-}
-class Dog extends Animal {
-  breed: string;
-}
-interface NotOkay {
-  [x: number]: Animal; // 数字索引类型“Animal”不能赋给字符串索引类型“Dog”。
-  [x: string]: Dog;
-}
+// class Animal {
+//   name: string;
+// }
+// class Dog extends Animal {
+//   breed: string;
+// }
+// interface NotOkay {
+//   [index: string]: Animal; // 数字索引类型“Animal”不能赋给字符串索引类型“Dog”。
+//   [index1: string]: Dog;
+// }
+
+// interface ReadonlyStringArray {
+//   readonly [index: number]: string;
+// }
+// let arr: ReadonlyStringArray = ['aoa', 'bob']
+// arr[1] = '222' // 类型“ReadonlyStringArray”中的索引签名仅允许读取
+// console.log(arr[0])
+
+// 约束类
 
 

@@ -98,5 +98,49 @@
 // // console.log(stu1.name) // 属性“name”受保护，只能在类“Person”及其子类中访问
 // // console.log(stu1.age) // 属性“age”为私有属性，只能在类“Student”中访问
 
+// 构造函数也可以被标记成protected。 这意味着这个类不能在包含它的类外被实例化，但是能被继承。比如，
+// class Person {
+//   protected name: string;
+//   protected constructor(theName: string) { this.name = theName; }
+// }
+
+// // Employee 能够继承 Person
+// class Employee extends Person {
+//   private department: string;
+
+//   constructor(name: string, department: string) {
+//       super(name);
+//       this.department = department;
+//   }
+
+//   public getElevatorPitch() {
+//       return `Hello, my name is ${this.name} and I work in ${this.department}.`;
+//   }
+// }
+
+// let howard = new Employee("Howard", "Sales");
+// let john = new Person("John"); // 错误: 'Person' 的构造函数是被保护的.类“Person”的构造函数是受保护的，仅可在类声明中访问
+
+// readonly
+// 你可以使用readonly关键字将属性设置为只读的。 只读属性必须在声明时或构造函数里被初始化。
+// class Octopus {
+//   readonly name: string;
+//   readonly numberOfLegs: number = 8;
+//   constructor (theName: string) {
+//       this.name = theName;
+//   }
+//   getName() {
+//     console.log(this.name)
+//     return this.name
+//   }
+// }
+// let dad = new Octopus("Man with the 8 strong legs");
+// let name1 = dad.getName() // Man with the 8 strong legs
+// console.log(name1) // Man with the 8 strong legs
+// dad.name = "Man with the 3-piece suit"; // 错误! name 是只读的.
+
+// 参数属性
+
+
 
 
